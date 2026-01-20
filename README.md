@@ -8,7 +8,7 @@ Script Python desenvolvido para sanear diretórios automaticamente. O algoritmo 
 * **Tratamento de Erros:** Validação de inputs do usuário para evitar quebras de execução (Crash) caso o diretório não exista ou seja inválido.
 * **Escalabilidade:** Estrutura baseada em dicionário (`hash map`), facilitando a adição de novas regras de extensão sem alterar a lógica principal.
 
-## 🚀 Como Usar (Quick Start)
+## 🚀 Quick Start
 
 Você pode rodar este projeto de duas formas: usando o executável standalone (sem necessidade de instalar nada) ou rodando o código fonte Python diretamente.
 
@@ -21,7 +21,7 @@ Ideal para rodar em máquinas de clientes ou ambientes bloqueados onde não é p
 
 ---
 
-### Opção B: Código Fonte (Para Desenvolvedores)
+### Opção B: Código Fonte
 Requer Python 3.x instalado.
 
 1. **Clone o repositório:**
@@ -38,8 +38,3 @@ Requer Python 3.x instalado.
     ```bash
     python organizer.py
     ```
-
-## 👨‍💻 Autor
-
-* **Filipe Vaz**
-      *(Estudante de Análise e Desenvolvimento de Sistemas - PUCPR)*

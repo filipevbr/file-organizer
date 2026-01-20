@@ -37,7 +37,10 @@ def organize_file(defined_path):
 
 # Bloco principal de execucao interativa
 while True:
-    path = input("Digite o caminho: ").strip()
+    print("--- BEM VINDO(A) ---")
+    print("Atualmente o script funciona com os formatos de arquivo: (pdf xlsx docx png jpg)")
+
+    path = input("\nDigite o caminho (diretório): ").strip()
     print("Verificando o caminho...")
     defined_path = Path(path)
 
