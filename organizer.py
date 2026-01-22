@@ -14,13 +14,14 @@ def organize_file(defined_path):
         if file.is_dir():  # Ignora se for uma pasta, focando apenas em arquivos
             continue
             
-        # Verifica se a extensao (convertida para minuscula) esta no mapeamento
+        # Verifica se o arquivo e a extensao (convertida para minuscula) esta no mapeamento
         if file.suffix.lower() in rules:  
             folder_name = rules[file.suffix.lower()]
-            destination_directory = defined_path / folder_name
+            output_folder = "Arquivos_Organizados"
+            destination_directory = defined_path / output_folder / folder_name  # Define o caminho e a pasta onde seram organiados os arquivos
             
             # Cria a pasta e protege o script para nao quebrar se ela ja existir
-            destination_directory.mkdir(exist_ok=True)  
+            destination_directory.mkdir(parents=True, exist_ok=True)  
 
             new_file = destination_directory / file.name
 
@@ -33,7 +34,8 @@ def organize_file(defined_path):
             shutil.move(str(file), str(new_file))  # Transfere fisicamente o arquivo
             print(f"Movido: {file.name} -> {new_file.name}")
             
-    print("--- Organização concluída. ---")       
+    print("--- Organização concluída. ---")
+    print("Pressione ENTER para continuar...")       
 
 # Bloco principal de execucao interativa
 while True:
